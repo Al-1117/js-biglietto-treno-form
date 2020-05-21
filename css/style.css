@@ -1,0 +1,72 @@
+
+/* RESET */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* GENERAL RULES */
+
+body{
+  background-color: #b91450;
+}
+
+main {
+  color: black;
+}
+
+/* Form */
+
+main h2{
+  text-transform: uppercase;
+  padding: 30px 0;
+  color: #ffffff;
+}
+
+label{
+  color:#b91450;
+}
+
+.ms_form{
+  padding-top: 20px;
+}
+
+.form_wrapper,
+.buttons{
+  text-align: center;
+  background-color: #ffffff;
+}
+
+/* Btn */
+.buttons{
+  background-color: #ffffff;
+  padding: 30px 0;
+}
+
+.ms_btn{
+  width: 60px;
+  height: 25px;
+  background-color: grey;
+  border-radius: 5px;
+}
+
+/* Details */
+
+.details{
+  color: black;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.details h5{
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.details p{
+  font-size: 13px;
+  font-weight: 800;
+}
