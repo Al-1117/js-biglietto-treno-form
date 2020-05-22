@@ -11,6 +11,8 @@ var buttonGenera = document.getElementById('ms_btn_genera');
 
 var buttonAnnulla = document.getElementById('ms_btn_annulla');
 
+var ticketDetails = document.getElementById('details');
+
 
 
 // Variabili dati Biglietto
@@ -27,6 +29,10 @@ var inputAgeValue;
 // Evento cliccando Tasto Genera
 buttonGenera.addEventListener('click',
   function() {
+
+    ticketDetails.className = ticketDetails.classlist + " display_block"
+
+
     // Nome passeggero sul biglietto
     passengerName.innerHTML = nameInput.value;
     // Dati inseriti dall'utente
@@ -66,6 +72,11 @@ buttonGenera.addEventListener('click',
 
 buttonAnnulla.addEventListener('click',
   function() {
+
+    // Nascondo Biglietto
+    ticketDetails.className = ticketDetails.classlist + " display_none"
+
+
     // Reset dei dati form
     nameInput.value = '';
     passengerName.innerHTML = '';
@@ -78,6 +89,8 @@ buttonAnnulla.addEventListener('click',
     cp.innerHTML = '';
     costoBiglietto.innerHTML = '';
     ageInput.value = 'minorenne';
+
+
 
 
 

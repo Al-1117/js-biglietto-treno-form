@@ -78,3 +78,12 @@ label{
   font-size: 13px;
   font-weight: 800;
 }
+
+/* Display */
+.display_none{
+  display: none;
+}
+
+.display_block{
+  display: block;
+}
