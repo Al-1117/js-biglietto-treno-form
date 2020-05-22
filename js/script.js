@@ -1,56 +1,95 @@
 // Raccolta dati
 
-var name = document.getElementById('form_name');
-var km = parseInt(document.getElementById('form_km'));
-var age = document.getElementById('form_age');
+var nameInput = document.getElementById('form_name');
+var kmInput = document.getElementById('form_km');
+var ageInput = document.getElementById('form_age');
 
 
 // Altre variabili
-
-var ageValue;
-var kmValue;
-
-var passengerName = document.getElementById('passenger_name');
 
 var buttonGenera = document.getElementById('ms_btn_genera');
 
 var buttonAnnulla = document.getElementById('ms_btn_annulla');
 
+
+
+// Variabili dati Biglietto
+var passengerName = document.getElementById('passenger_name');
+var discount = document.getElementById('discount');
+var carrozza = document.getElementById('chariot');
+var cp = document.getElementById('cp');
+var costoBiglietto = document.getElementById('ticket_cost');
+
+// Varibili prezzo Biglietto
+var kmInputValue;
+var inputAgeValue;
+
 // Evento cliccando Tasto Genera
 buttonGenera.addEventListener('click',
   function() {
     // Nome passeggero sul biglietto
-    passengerName.innerHTML = name.value;
+    passengerName.innerHTML = nameInput.value;
     // Dati inseriti dall'utente
-    ageValue = age.value;
-    kmValue = km.value;
-  }
+    kmInputValue = kmInput.value;
+    inputAgeValue = ageInput.value;
 
+    // Prezzo Biglietto e calcolo
+    var ticketPrice = kmInputValue * 0.21;
+
+
+    if (inputAgeValue == 'minorenne') {
+      ticketPrice = ticketPrice - (ticketPrice * 20 / 100);
+      discount.innerHTML = "Offerta minorenne";
+
+    } else if (inputAgeValue == 'over'){
+      ticketPrice = ticketPrice - (ticketPrice * 40 / 100);
+      discount.innerHTML = "Offerta over 65";
+
+    }
+
+    // stampo dati elaborati
+    costoBiglietto.innerHTML = ticketPrice.toFixed(2) + " euro";
+    carrozza.innerHTML = Math.floor(Math.random() * 21);
+    cp.innerHTML = Math.floor(Math.random() * 10000);
+
+
+
+
+
+
+
+
+  }
 );
 
 // Evento cliccando tasto annulla
 
 buttonAnnulla.addEventListener('click',
   function() {
-    // Reset dei dati
-    name.value = '';
+    // Reset dei dati form
+    nameInput.value = '';
     passengerName.innerHTML = '';
-    kmValue.innerHTML = '';
+    kmInput.value = '';
+
+
+    // Reset dei dati form biglietto
+    discount.innerHTML = '';
+    carrozza.innerHTML = '';
+    cp.innerHTML = '';
+    costoBiglietto.innerHTML = '';
+    ageInput.value = 'minorenne';
+
+
 
   }
 )
 
-
+//
 // Prezzo
 
-var ticketPrice = km * 0.21;
 
-if (age == 'minorenne') {
-  ticketPrice = ticketPrice - (ticketPrice * 20 / 100);
 
-} else if (age == 'over'){
-  ticketPrice = ticketPrice - (ticketPrice * 40 / 100);
 
-}
+// console.log(ticketPrice);
 
-console.log(ticketPrice);
+// document.getElementById('ticket').innerHTML = ticketPrice.toFixed(2) + " euro";

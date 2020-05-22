@@ -40,6 +40,14 @@ label{
   background-color: #ffffff;
 }
 
+.form_wrapper{
+  border-radius: 10px;
+}
+
+.ms_form input{
+  border-radius: 5px;
+}
+
 /* Btn */
 .buttons{
   background-color: #ffffff;
