@@ -58,13 +58,6 @@ buttonGenera.addEventListener('click',
     carrozza.innerHTML = Math.floor(Math.random() * 21);
     cp.innerHTML = Math.floor(Math.random() * 10000);
 
-
-
-
-
-
-
-
   }
 );
 
@@ -91,18 +84,5 @@ buttonAnnulla.addEventListener('click',
     ageInput.value = 'minorenne';
 
 
-
-
-
   }
 )
-
-//
-// Prezzo
-
-
-
-
-// console.log(ticketPrice);
-
-// document.getElementById('ticket').innerHTML = ticketPrice.toFixed(2) + " euro";
