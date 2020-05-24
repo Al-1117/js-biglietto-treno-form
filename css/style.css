@@ -90,6 +90,14 @@ label{
   border: 1px solid black;
 }
 
+/* Mistake */
+.mistake_message p{
+  color: red;
+  font-size: 17px;
+  font-weight: 800;
+
+}
+
 /* Details */
 
 .details{

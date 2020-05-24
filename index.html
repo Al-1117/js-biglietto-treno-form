@@ -26,21 +26,21 @@
 
             <!-- Form -->
             <div class="form_wrapper col-xs-12 text-center">
-              <div class="col-xs-2 col-xs-offset-3  text-center">
+              <div class="col-xs-2 col-md-2 col-xs-offset-3  text-center">
                 <div class="ms_form">
                   <label>Nome Cognome</label>
                   <input id="form_name" type="text" placeholder="inserisci in tuo nome">
                 </div>
               </div>
 
-              <div class="col-xs-2">
+              <div class="col-xs-2 col-md-2">
                 <div class="ms_form">
                   <label>Km da percorrere</label>
                   <input id="form_km" type="number" placeholder="km da percorrere">
                 </div>
               </div>
 
-              <div class="col-xs-2">
+              <div class="col-xs-2 col-md-2">
                 <div class="ms_form">
                   <label>Fascia d'età</label>
                   <select id="form_age">
@@ -66,6 +66,13 @@
                   Annulla
                 </button>
               </div>
+            </div>
+            <div class="display_none" id="mistake">
+              <div class="mistake_message" id="mistake_message">
+                <p>Hai commesso degli errori. Controlla i dati immessi.</p>
+
+              </div>
+
             </div>
           </div>
         </section>
